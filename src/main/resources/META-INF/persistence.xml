@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                            http://xmlns.jcp.org/xml/ns/persistence_2_1.xsd">
+  <persistence-unit name="PizzaDelivery" transaction-type="RESOURCE_LOCAL">
+    <class>club.kuzyayo.pizza.delivery.entity.Customer</class>
+    <class>club.kuzyayo.pizza.delivery.entity.Order</class>
+    <class>club.kuzyayo.pizza.delivery.entity.OrderItem</class>
+    <class>club.kuzyayo.pizza.delivery.entity.OrderItemId</class>
+    <class>club.kuzyayo.pizza.delivery.entity.Pizza</class>
+    <class>club.kuzyayo.pizza.delivery.entity.PizzaRate</class>
+    <class>club.kuzyayo.pizza.delivery.converter.LocalDateTimeConverter</class>
+    <class>club.kuzyayo.pizza.delivery.JpaConverter</class>
+    <properties>
+      <!-- Configuring JDBC properties -->
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1:5432/bd_course" />
+      <property name="javax.persistence.jdbc.user" value="postgres" />
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect" />
+      <property name="hibernate.show_sql" value="true" />
+    </properties>
+  </persistence-unit>
+</persistence>
